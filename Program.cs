@@ -28,6 +28,16 @@ namespace LearnCSharp
             //else Console.WriteLine("Number found at index " + resultIndex);
 
             //BenchmarkRunner.Run<SearchBenchmark>();
+
+            var car = new Car();
+            var byke = new Byke();
+
+            car.FuelType();
+            car.NoOfCylinders();
+
+            byke.FuelType();
+            byke.NoOfCylinders();
+
             Console.Read();
         }
     }
