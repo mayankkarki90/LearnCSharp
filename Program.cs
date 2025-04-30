@@ -38,6 +38,24 @@ namespace LearnCSharp
             byke.FuelType();
             byke.NoOfCylinders();
 
+            Vehicle newByke = new Byke();
+            newByke.FuelType();//This will call base class method because instance is
+                               //created with Base class and new is used on derived class
+
+            var exam = new
+            {
+                Level = 1,
+                Questions = new[] {
+                new { Text = "A", Answer = 23 },
+                new { Text = "B", Answer = 35 }
+               }
+            };
+
+            //Non Destructive mutation, exam will not change but a new anonymous
+            //instance is creates with same values
+            var examWithNewLevel = exam with { Level = 2 };
+            
+            
             Console.Read();
         }
     }

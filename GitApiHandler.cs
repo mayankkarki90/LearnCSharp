@@ -63,7 +63,7 @@ namespace LearnCSharp
                 { "title" , title }
             };
 
-            var apiResponse = HttpHelper.SendRequest(apiUrl, HttpMethod.Post, _patToken, data: data, headers: _githubApiRequiredHeaders).Result;
+            var apiResponse = HttpHandler.SendRequest(apiUrl, HttpMethod.Post, _patToken, data: data, headers: _githubApiRequiredHeaders).Result;
             var rawResponse = apiResponse.Content.ReadAsStringAsync().Result;
 
             if (apiResponse.StatusCode == HttpStatusCode.OK)
@@ -103,7 +103,7 @@ namespace LearnCSharp
             string repo = splitUrl[2].ToString();
             string apiUrl = $"https://api.github.com/repos/{owner}/{repo}/branchs";
 
-            var apiResponse = HttpHelper.SendRequest(apiUrl, HttpMethod.Post, _patToken, headers: _githubApiRequiredHeaders).Result;
+            var apiResponse = HttpHandler.SendRequest(apiUrl, HttpMethod.Post, _patToken, headers: _githubApiRequiredHeaders).Result;
             var rawResponse = apiResponse.Content.ReadAsStringAsync().Result;
 
             if (apiResponse.StatusCode == HttpStatusCode.OK)
