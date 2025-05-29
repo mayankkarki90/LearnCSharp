@@ -29,6 +29,8 @@ namespace LearnCSharp
 
             //BenchmarkRunner.Run<SearchBenchmark>();
 
+            ArrayLearn arr = new ArrayLearn();
+
             var car = new Car();
             var byke = new Byke();
 
