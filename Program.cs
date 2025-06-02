@@ -29,7 +29,11 @@ namespace LearnCSharp
 
             //BenchmarkRunner.Run<SearchBenchmark>();
 
-            ArrayLearn arr = new ArrayLearn();
+            //ArrayLearn arr = new ArrayLearn();
+            var employeeViewModel = new EmployeeViewModel();
+            Console.WriteLine(employeeViewModel[0].Name);
+            Console.WriteLine(employeeViewModel[1].Name);
+            Console.WriteLine(employeeViewModel[2].Name);
 
             var car = new Car();
             var byke = new Byke();
