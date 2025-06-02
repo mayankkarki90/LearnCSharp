@@ -35,6 +35,14 @@ namespace LearnCSharp
             Console.WriteLine(employeeViewModel[1].Name);
             Console.WriteLine(employeeViewModel[2].Name);
 
+            DoChat chat = new DoChat();
+            //Adding two delegates implementation, enquues the 2nd implmentation
+            chat.SendMessage = chat.SendMessage + ((msg) => Console.WriteLine("Executing message handler 2"));
+            //Can add more handler to delegate using +=
+            chat.SendMessage += (msg) => Console.WriteLine("Executing message handler 3");
+
+            chat.SendMessage("Message 1");
+
             var car = new Car();
             var byke = new Byke();
 
