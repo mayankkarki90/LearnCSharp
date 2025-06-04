@@ -30,6 +30,8 @@ namespace LearnCSharp
             //BenchmarkRunner.Run<SearchBenchmark>();
 
             //ArrayLearn arr = new ArrayLearn();
+
+            //Indexer
             var employeeViewModel = new EmployeeViewModel();
             Console.WriteLine(employeeViewModel[0].Name);
             Console.WriteLine(employeeViewModel[1].Name);
@@ -42,6 +44,11 @@ namespace LearnCSharp
             chat.SendMessage += (msg) => Console.WriteLine("Executing message handler 3");
 
             chat.SendMessage("Message 1");
+
+            WorkingHours workingHours = new WorkingHours { RegularHours = 10, OvertimeHours = 1 };
+            WorkingHours newWorkingHours = new WorkingHours { RegularHours = 8, OvertimeHours = 1 };
+            var updatedWorkingHours = workingHours + newWorkingHours;
+
 
             var car = new Car();
             var byke = new Byke();
@@ -68,8 +75,8 @@ namespace LearnCSharp
             //Non Destructive mutation, exam will not change but a new anonymous
             //instance is creates with same values
             var examWithNewLevel = exam with { Level = 2 };
-            
-            
+
+
             Console.Read();
         }
     }
