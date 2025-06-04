@@ -45,10 +45,16 @@ namespace LearnCSharp
 
             chat.SendMessage("Message 1");
 
+            //operator overloading
             WorkingHours workingHours = new WorkingHours { RegularHours = 10, OvertimeHours = 1 };
             WorkingHours newWorkingHours = new WorkingHours { RegularHours = 8, OvertimeHours = 1 };
             var updatedWorkingHours = workingHours + newWorkingHours;
 
+            //call a method using fully qualified interface name
+            var truck = new Truck();
+            truck.GoForward(50); //Normal method called
+            IDrivable truck2 = truck;
+            truck2.GoForward(50); //Interface method called
 
             var car = new Car();
             var byke = new Byke();
