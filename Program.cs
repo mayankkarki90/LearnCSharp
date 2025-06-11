@@ -4,32 +4,32 @@ using BenchmarkDotNet.Running;
 namespace LearnCSharp
 {
     internal class Program
-    {
+    {       
         static void Main(string[] args)
         {
-            //List<string> list1 = new List<string> { "item 1", "item 2" };
-            //List<string> list2 = [
-            //.. list1, "item 3", ];
+            List<string> list1 = new List<string> { "item 1", "item 2" };
+            List<string> list2 = [
+            .. list1, "item 3", ];
 
-            //var node = new Node(1,
-            //    new Node(2,
-            //        new Node(4), new Node(5)),
-            //    new Node(3,
-            //        new Node(6), new Node(7)));
-            //new BreathFirstTraversal().Traverse1(node);
+            var node = new Node(1,
+                new Node(2,
+                    new Node(4), new Node(5)),
+                new Node(3,
+                    new Node(6), new Node(7)));
+            new BreathFirstTraversal().Traverse1(node);
 
-            //int[] sortedArray = { 2, 5, 7, 9, 13, 17, 30 };
-            //int numberToFind = 17;
-            //int resultIndex = Search.BinarySearch(sortedArray, numberToFind);
-            //if (resultIndex == -1)
-            //{
-            //    Console.WriteLine("Can't find number");
-            //}
-            //else Console.WriteLine("Number found at index " + resultIndex);
+            int[] sortedArray = { 2, 5, 7, 9, 13, 17, 30 };
+            int numberToFind = 17;
+            int resultIndex = Search.BinarySearch(sortedArray, numberToFind);
+            if (resultIndex == -1)
+            {
+                Console.WriteLine("Can't find number");
+            }
+            else Console.WriteLine("Number found at index " + resultIndex);
 
             //BenchmarkRunner.Run<SearchBenchmark>();
 
-            //ArrayLearn arr = new ArrayLearn();
+            ArrayLearn arr = new ArrayLearn();
 
             //Indexer
             var employeeViewModel = new EmployeeViewModel();
@@ -42,7 +42,6 @@ namespace LearnCSharp
             chat.SendMessage = chat.SendMessage + ((msg) => Console.WriteLine("Executing message handler 2"));
             //Can add more handler to delegate using +=
             chat.SendMessage += (msg) => Console.WriteLine("Executing message handler 3");
-
             chat.SendMessage("Message 1");
 
             //operator overloading
@@ -82,6 +81,7 @@ namespace LearnCSharp
             //instance is creates with same values
             var examWithNewLevel = exam with { Level = 2 };
 
+            ExceptionLearn.TestExceptionThrow();
 
             Console.Read();
         }
